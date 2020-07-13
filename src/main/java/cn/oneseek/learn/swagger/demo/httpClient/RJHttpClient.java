@@ -6,14 +6,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class RJHttpClient {
-    public String getToken() throws Exception{
-        String url = "http://oneseek.cn:6020/rest/login/root/taosdata";
+    public String getToken(String url,String method) throws Exception{
         URL serverUrl = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) serverUrl.openConnection();
-        connection.setRequestMethod("GET");
+        connection.setRequestMethod(method);
         if (connection.getResponseCode() != 200) {
             throw new RuntimeException(
-                    "HTTP GET Request Failed with Error code : "
+                    "HTTP "+method+" Request Failed with Error code : "
                             + connection.getResponseCode());
         }
         BufferedReader responseBuffer = new BufferedReader(

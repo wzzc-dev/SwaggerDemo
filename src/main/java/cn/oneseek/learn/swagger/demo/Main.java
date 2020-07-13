@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 public class Main {
     public static void main(String[] args) throws Exception {
         RJHttpClient rjHttpClient = new RJHttpClient();
-        String token = rjHttpClient.getToken();
+        String token = rjHttpClient.getToken("http://oneseek.cn:6020/rest/login/root/taosdata","GET");
 
         ResultToken resultToken = JSON.parseObject(token,ResultToken.class);
         System.out.println(resultToken.toString());
