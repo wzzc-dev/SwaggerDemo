@@ -3,7 +3,6 @@ package cn.oneseek.learn.swagger.demo;
 import cn.oneseek.learn.swagger.demo.domain.response.ResultToken;
 import cn.oneseek.learn.swagger.demo.httpClient.RJHttpClient;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 
 public class Main {
     public static void main(String[] args) throws Exception {
